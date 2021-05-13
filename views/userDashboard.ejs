@@ -1,0 +1,36 @@
+<%- include('partials/header') %> 
+<link rel="stylesheet" href="/CSS/dashboard.css">
+<div class="jumbotron">
+    <div class="container">
+        <h3>
+            Thank you!! <%= user.name %> 
+        </h3>
+        <p>Through blood donation we can save the life of many persons.</p>
+        <a href="/logout"><button>Log Out</button></a>
+    </div>
+    <h2 class="text-center">Your Donation History</h2>
+    <div class="donation">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Report</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for( let i = 0; i < data.length; i++ ) { %>
+                    <tr>
+                        <th scope="row"><%- i+1 %> </th>
+                        <td><%= data[i].location %></td>
+                        <td><%- (new Date(data[i].date)).toDateString() %></td>
+                        <td><%= data[i].report %></td>                    
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<h1 class="text-center"><blockquote>"It takes 15 mins to save a life – Donate Blood"</blockquote></h1>
+<%- include('partials/footer') %> 
