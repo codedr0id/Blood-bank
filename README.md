@@ -4,4 +4,4 @@
 <p align="center">This web application template is for a Blood Bank Organization and has all the basic functionalities. The testing on this Web App is done using Selenium.</p>
 
 <hr>
-<p align="center"> <strong></></strong> with ❤️ by <em>Mehul</em></p>
+<p align="center"> Made with ❤️ by <em>Mehul</em></p>
